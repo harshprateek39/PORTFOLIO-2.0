@@ -75,3 +75,49 @@ body{ scroll-snap-type: y mandatory; }
 ::-webkit-scrollbar {
   display: none;
 }
+.flip-card {
+  background-color: transparent;
+    min-height: 500px;
+    width: 100%;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  min-height: 500px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  backdrop-filter: blur(7px) ;
+  -webkit-backdrop-filter: blur(7px) ;
+ background-color: #566cff0c;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.356);
+ 
+}
+
+.flip-card-back {
+  backdrop-filter: blur(7px) ;
+    -webkit-backdrop-filter: blur(7px) ;
+    background-color: #566cff0c;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  color: white;
+  transform: rotateY(180deg);
+}

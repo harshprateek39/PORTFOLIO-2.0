@@ -90,3 +90,4 @@ export  const data3 = [
       },
     
   ];
+  export const data4=["HTML", "CSS", "JavaScript","NodeJs", "ReactJs"];

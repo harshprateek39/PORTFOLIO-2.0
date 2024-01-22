@@ -1,6 +1,7 @@
 import React, { useState ,useRef} from 'react';
 import {easeInOut, motion ,useScroll, useSpring, useTransform} from "framer-motion";
 import image from "../assets/profile2.jpg";
+import { data4 } from '../assets/data';
 const About = () => {
 
   const ref = useRef(null);
@@ -35,8 +36,22 @@ const About = () => {
       between the frontend and backend. Express.js isn't just a tool ,it's my secret sauce.
   </div>
   </div>
-  <div className=' md:pt-16 flex flex-col items-center      '>
-    <img className='w-1/2 rounded-md shadow-md hover:shadow-2xl grayscale hover:grayscale-0 ring-0 ring-offset-black hover:ring-offset-2 ring-black  hover:shadow-black transition delay-100 ease-linear' src={image} alt=''/>
+  <div className=' md:pt-16 flex flex-col items-center justify-center lg:px-14   py-4  m-2 '>
+  <div className="flip-card">
+  <motion.div initial={{ rotateY:0, scale:0.6}} whileInView={{ rotateY:1440, scale:1}} whileHover={{ rotateY:1620}} transition={{ duration:0.5 }} className="flip-card-inner">
+    <div className="flip-card-front flex flex-col justify-center items-center">
+      
+        <h1 className=' font-semibold lg:text-3xl'>Hover me To See my Skillsets</h1>
+      
+    </div>
+    <div class="flip-card-back  justify-start   p-5">
+    <div className='  flex gap-4   flex-wrap '>{data4.map((item)=><p className=' bg-white/10 rounded-3xl   px-6 py-2   '>{item}</p>  ) }</div>
+
+ 
+     
+    </div>
+  </motion.div>
+</div>
   </div>
      </motion.div>;
 };
