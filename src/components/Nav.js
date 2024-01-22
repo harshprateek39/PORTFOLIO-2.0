@@ -29,13 +29,9 @@ const Nav = () => {
     {
       id:'services',
       name:'Services',
-      icon:<BsClipboardData/>
-    },
-    {
-      id:'contact',
-      name:'Contact',
       icon:<TiContacts/>
-    }
+    },
+    
   ]
   return<nav className='fixed md:bottom-2 md:h-full md:w-[50px] bottom-0 w-full     z-50 flex md:flex-col md:justify-center '>
    <div className='  bg-black/20 backdrop-blur-2xl md:rounded-full md:h-1/2 w-full md:pb-0 pb-4 

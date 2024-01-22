@@ -20,7 +20,7 @@ const About = () => {
     });
 
   const [skills,setSkills]=useState(["C++, "])
-  return <motion.div style={{scaleX}} ref={ref} initial={{  opacity:0}} whileInView={{   opacity:1 }}  transition={{  delay:0.4}} className=' scroll-m-0 snap-start min-h-screen md:pl-20 grid grid-flow-row md:grid-cols-2 gap-1 grid-cols-1 md:pr-20 md:pt-14 md:pb-14' id='about'>
+  return <motion.div style={{scaleX}} ref={ref} initial={{  opacity:0}} whileInView={{   opacity:1 }}  transition={{  delay:0.4}} className=' scroll-m-0 snap-start min-h-screen md:pl-20 grid grid-flow-row mx-2 md:grid-cols-2 gap-1 grid-cols-1 md:pr-20 md:pt-14 md:pb-14' id='about'>
   <div className=' flex flex-col '>
   <div className=' flex justify-start items-baseline gap-4'>
   <motion.div initial={{  opacity:0, y:10}} whileInView={{  opacity:[0,1] , y:[10,0]}} transition={{duration:0.3, delay:0.5}} viewport={{once:true}}   className='  whitespace-nowrap text-slate-200 font-semibold text-3xl'>About Me</motion.div>
@@ -36,16 +36,16 @@ const About = () => {
       between the frontend and backend. Express.js isn't just a tool ,it's my secret sauce.
   </div>
   </div>
-  <div className=' md:pt-16 flex flex-col items-center justify-center lg:px-14   py-4  m-2 '>
+  <div className=' md:pt-16 flex flex-col items-center justify-center lg:px-14   py-4   '>
   <div className="flip-card">
-  <motion.div initial={{ rotateY:0, scale:0.6}} whileInView={{ rotateY:1440, scale:1}} whileHover={{ rotateY:1620}} transition={{ duration:0.5 }} className="flip-card-inner">
+  <motion.div initial={{ rotateY:0,  scale:0.6}} whileInView={{ rotateY:1440, scale:1}} whileHover={{rotateY:1620}} viewport={{once:true}}   transition={{ duration:0.1}} className="flip-card-inner">
     <div className="flip-card-front flex flex-col justify-center items-center">
       
-        <h1 className=' font-semibold lg:text-3xl'>Hover me To See my Skillsets</h1>
+        <h1 className=' font-semibold lg:text-3xl select-none'>Hover me To See my Skillsets</h1>
       
     </div>
     <div class="flip-card-back  justify-start   p-5">
-    <div className='  flex gap-4   flex-wrap '>{data4.map((item)=><p className=' bg-white/10 rounded-3xl   px-6 py-2   '>{item}</p>  ) }</div>
+    <div className='  flex gap-4   flex-wrap '>{data4.map((item)=><p className=' bg-white/10 rounded-3xl  select-none   px-6 py-2   '>{item}</p>  ) }</div>
 
  
      
